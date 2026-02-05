@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+@layer base {
+  :root {
+    --background: 215 50% 7%;
+    --foreground: 210 40% 98%;
+
+    --card: 215 45% 10%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 215 45% 10%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 191 100% 50%;
+    --primary-foreground: 215 50% 7%;
+
+    --secondary: 215 40% 15%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 215 35% 18%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 191 100% 50%;
+    --accent-foreground: 215 50% 7%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 30% 20%;
+    --input: 215 30% 20%;
+    --ring: 191 100% 50%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --teal: 191 100% 50%;
+    --teal-light: 191 100% 85%;
+    --dark: 215 50% 7%;
+    --gray-light: 215 30% 15%;
+    --sale: 0 84% 60%;
+  }
+
+  .dark {
+    --background: 220 20% 10%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 20% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 20% 12%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 168 100% 45%;
+    --primary-foreground: 220 20% 10%;
+
+    --secondary: 220 20% 18%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 20% 18%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 168 100% 45%;
+    --accent-foreground: 220 20% 10%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 20% 18%;
+    --input: 220 20% 18%;
+    --ring: 168 100% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-[hsl(180,80%,45%)] bg-clip-text text-transparent;
+  }
+
+  .ticker-scroll {
+    animation: ticker 30s linear infinite;
+  }
+
+  @keyframes ticker {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .hero-fade-in {
+    animation: fadeIn 0.8s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .product-card-hover {
+    @apply transition-all duration-300;
+  }
+
+  .product-card-hover:hover {
+    @apply shadow-xl -translate-y-1;
+  }
+
+  .btn-teal {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-200;
+  }
+
+  .btn-outline-teal {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-200;
+  }
+}
