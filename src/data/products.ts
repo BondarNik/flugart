@@ -18,8 +18,7 @@ import bambuP1s from "@/assets/printers/bambu-p1s-styled.jpg";
 import crealityHalotMage from "@/assets/printers/creality-halot-mage-styled.jpg";
 
 // ШПАК ХАНТЕР
-import shpakHunter13t from "@/assets/drones/shpak-hunter-13t-styled.jpg";
-import shpakHunter13d from "@/assets/drones/shpak-hunter-13d-styled.jpg";
+import shpakHunterStyled from "@/assets/drones/shpak-hunter-styled.jpg";
 
 // Import unique drone product photos for each series
 import taipan8Real from "@/assets/drones/taipan-8-dark.jpg";
@@ -1603,8 +1602,8 @@ const shpakHunterProducts: Product[] = [
     nameEn: 'FPV Drone "SHPAK" HUNTER 13-T (10km) with Battery',
     category: "FPV Дрони",
     price: 48510,
-    image: shpakHunter13t,
-    images: [shpakHunter13t],
+    image: shpakHunterStyled,
+    images: [shpakHunterStyled],
     inStock: true,
     stockCount: 3,
     badge: "ПОКУПКА ЗА Е-БАЛИ",
@@ -1648,8 +1647,8 @@ const shpakHunterProducts: Product[] = [
     nameEn: 'FPV Drone "SHPAK" HUNTER 13-D (10km) with Battery',
     category: "FPV Дрони",
     price: 40000,
-    image: shpakHunter13d,
-    images: [shpakHunter13d],
+    image: shpakHunterStyled,
+    images: [shpakHunterStyled],
     inStock: true,
     stockCount: 4,
     badge: "ПОКУПКА ЗА Е-БАЛИ",
