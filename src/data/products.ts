@@ -18,8 +18,8 @@ import bambuP1s from "@/assets/printers/bambu-p1s-styled.jpg";
 import crealityHalotMage from "@/assets/printers/creality-halot-mage-styled.jpg";
 
 // ШПАК ХАНТЕР
-import shpakHunter13t from "@/assets/drones/shpak-hunter-13t.jpg";
-import shpakHunter13d from "@/assets/drones/shpak-hunter-13d.jpg";
+import shpakHunter13t from "@/assets/drones/shpak-hunter-13t-styled.jpg";
+import shpakHunter13d from "@/assets/drones/shpak-hunter-13d-styled.jpg";
 
 // Import unique drone product photos for each series
 import taipan8Real from "@/assets/drones/taipan-8-dark.jpg";
@@ -1597,7 +1597,7 @@ allProducts.push(...printerProducts);
 // ==================== СЕРІЯ "ШПАК ХАНТЕР" 13" ====================
 const shpakHunterProducts: Product[] = [
   {
-    id: 200,
+    id: 300,
     name: 'FPV-дрон "ШПАК" ХАНТЕР 13-Т (10км) з АКБ',
     nameKey: "product_shpak_hunter_13t",
     nameEn: 'FPV Drone "SHPAK" HUNTER 13-T (10km) with Battery',
@@ -1642,7 +1642,7 @@ const shpakHunterProducts: Product[] = [
     ],
   },
   {
-    id: 201,
+    id: 301,
     name: 'FPV-дрон "ШПАК" ХАНТЕР 13-Д (10км) з АКБ',
     nameKey: "product_shpak_hunter_13d",
     nameEn: 'FPV Drone "SHPAK" HUNTER 13-D (10km) with Battery',
