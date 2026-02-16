@@ -14,6 +14,7 @@ interface ProductCardProps {
   title?: string;
   price: number;
   oldPrice?: number;
+  badge?: string;
 }
 
 const categoryTranslationKeys: Record<string, string> = {
@@ -23,7 +24,7 @@ const categoryTranslationKeys: Record<string, string> = {
   "Наземні станції": "groundStationsCategory",
 };
 
-const ProductCard = ({ id = 1, image, category, title = "", price, oldPrice }: ProductCardProps) => {
+const ProductCard = ({ id = 1, image, category, title = "", price, oldPrice, badge }: ProductCardProps) => {
   const { addItem } = useCart();
   const { isFavorite, toggleFavorite } = useFavorites();
   const { toast } = useToast();
@@ -86,6 +87,12 @@ const ProductCard = ({ id = 1, image, category, title = "", price, oldPrice }: P
 
   return (
     <div className="bg-card rounded-xl p-4 product-card-hover border border-border group flex flex-col h-full relative">
+      {/* Badge */}
+      {badge && (
+        <div className="absolute top-2 left-2 z-30 bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded shadow-md">
+          {badge}
+        </div>
+      )}
       {/* Action Buttons - Outside the Link */}
       <div className="absolute top-6 right-6 z-20 flex gap-2">
         <button

@@ -246,6 +246,7 @@ const SearchResults = () => {
                       price={product.price}
                       oldPrice={product.oldPrice}
                       category={product.category}
+                      badge={product.badge}
                     />
                   ))}
                 </div>
