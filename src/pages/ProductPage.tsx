@@ -223,8 +223,13 @@ const ProductPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             <div className="space-y-4">
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-background">
+                {product.badge && (
+                  <span className="absolute top-4 left-4 bg-yellow-400 text-black text-sm font-bold px-4 py-1.5 rounded-lg z-10 shadow-md">
+                    {product.badge}
+                  </span>
+                )}
                 {discount > 0 && (
-                  <span className="absolute top-4 left-4 bg-sale text-primary-foreground text-sm font-bold px-3 py-1.5 rounded-lg z-10">
+                  <span className={`absolute top-4 ${product.badge ? 'left-4 top-14' : 'left-4'} bg-sale text-primary-foreground text-sm font-bold px-3 py-1.5 rounded-lg z-10`}>
                     -{discount}%
                   </span>
                 )}
