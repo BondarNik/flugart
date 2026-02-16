@@ -17,6 +17,10 @@ import bambuP2sCombo from "@/assets/printers/bambu-p2s-combo-styled.jpg";
 import bambuP1s from "@/assets/printers/bambu-p1s-styled.jpg";
 import crealityHalotMage from "@/assets/printers/creality-halot-mage-styled.jpg";
 
+// ШПАК ХАНТЕР
+import shpakHunter13t from "@/assets/drones/shpak-hunter-13t.jpg";
+import shpakHunter13d from "@/assets/drones/shpak-hunter-13d.jpg";
+
 // Import unique drone product photos for each series
 import taipan8Real from "@/assets/drones/taipan-8-dark.jpg";
 import taipan8Thermal from "@/assets/drones/taipan-8-thermal-styled.jpg";
@@ -81,6 +85,7 @@ export interface Product {
   specsEn?: ProductSpec[];
   features?: string[];
   featuresEn?: string[];
+  badge?: string;
 }
 
 export const allProducts: Product[] = [
@@ -1588,6 +1593,102 @@ const printerProducts: Product[] = [
 
 // Add printer products to allProducts
 allProducts.push(...printerProducts);
+
+// ==================== СЕРІЯ "ШПАК ХАНТЕР" 13" ====================
+const shpakHunterProducts: Product[] = [
+  {
+    id: 200,
+    name: 'FPV-дрон "ШПАК" ХАНТЕР 13-Т (10км) з АКБ',
+    nameKey: "product_shpak_hunter_13t",
+    nameEn: 'FPV Drone "SHPAK" HUNTER 13-T (10km) with Battery',
+    category: "FPV Дрони",
+    price: 48510,
+    image: shpakHunter13t,
+    images: [shpakHunter13t],
+    inStock: true,
+    stockCount: 3,
+    badge: "ПОКУПКА ЗА Е-БАЛИ",
+    description: 'FPV-дрон "ШПАК" ХАНТЕР 13-Т — 13-дюймовий карбоновий дрон з тепловізійною камерою та оптоволокном 10 км. Комплектується акумулятором 8s3p 15000mAh.',
+    descriptionEn: 'FPV Drone "SHPAK" HUNTER 13-T — 13-inch carbon drone with thermal camera and 10 km fiber optic. Includes 8s3p 15000mAh battery.',
+    specs: [
+      { label: "Політний стек", value: "Argus 80A (або інші)" },
+      { label: "Двигуни", value: "4312-380 KV (або інші)" },
+      { label: "Рама", value: "13 дюймів (карбон)" },
+      { label: "Оптоволокно", value: "10 км" },
+      { label: "Відеокамера", value: "Тепловізійна камера" },
+      { label: "Акумулятор", value: "8s3p 15000mAh (або інші)" },
+      { label: "Пропелери", value: "HQProps 13x9x3 (або інші)" },
+    ],
+    specsEn: [
+      { label: "Flight Stack", value: "Argus 80A (or other)" },
+      { label: "Motors", value: "4312-380 KV (or other)" },
+      { label: "Frame", value: "13 inches (carbon)" },
+      { label: "Fiber Optic", value: "10 km" },
+      { label: "Camera", value: "Thermal camera" },
+      { label: "Battery", value: "8s3p 15000mAh (or other)" },
+      { label: "Propellers", value: "HQProps 13x9x3 (or other)" },
+    ],
+    features: [
+      "Тепловізійна камера для нічних операцій",
+      "Оптоволоконне з'єднання 10 км",
+      "Карбонова рама 13 дюймів",
+      "Акумулятор 8s3p 15000mAh у комплекті",
+    ],
+    featuresEn: [
+      "Thermal camera for night operations",
+      "10 km fiber optic connection",
+      "13-inch carbon frame",
+      "8s3p 15000mAh battery included",
+    ],
+  },
+  {
+    id: 201,
+    name: 'FPV-дрон "ШПАК" ХАНТЕР 13-Д (10км) з АКБ',
+    nameKey: "product_shpak_hunter_13d",
+    nameEn: 'FPV Drone "SHPAK" HUNTER 13-D (10km) with Battery',
+    category: "FPV Дрони",
+    price: 40000,
+    image: shpakHunter13d,
+    images: [shpakHunter13d],
+    inStock: true,
+    stockCount: 4,
+    badge: "ПОКУПКА ЗА Е-БАЛИ",
+    description: 'FPV-дрон "ШПАК" ХАНТЕР 13-Д — 13-дюймовий карбоновий дрон з денною камерою та оптоволокном 10 км. Комплектується акумулятором 8s3p 15000mAh.',
+    descriptionEn: 'FPV Drone "SHPAK" HUNTER 13-D — 13-inch carbon drone with day camera and 10 km fiber optic. Includes 8s3p 15000mAh battery.',
+    specs: [
+      { label: "Політний стек", value: "Argus 80A (або інші)" },
+      { label: "Двигуни", value: "4312-380 KV (або інші)" },
+      { label: "Рама", value: "13 дюймів (карбон)" },
+      { label: "Оптоволокно", value: "10 км" },
+      { label: "Відеокамера", value: "Caddx Ratel 2 (або інші)" },
+      { label: "Акумулятор", value: "8s3p 15000mAh (або інші)" },
+      { label: "Пропелери", value: "HQProps 13x9x3 (або інші)" },
+    ],
+    specsEn: [
+      { label: "Flight Stack", value: "Argus 80A (or other)" },
+      { label: "Motors", value: "4312-380 KV (or other)" },
+      { label: "Frame", value: "13 inches (carbon)" },
+      { label: "Fiber Optic", value: "10 km" },
+      { label: "Camera", value: "Caddx Ratel 2 (or other)" },
+      { label: "Battery", value: "8s3p 15000mAh (or other)" },
+      { label: "Propellers", value: "HQProps 13x9x3 (or other)" },
+    ],
+    features: [
+      "Денна камера Caddx Ratel 2",
+      "Оптоволоконне з'єднання 10 км",
+      "Карбонова рама 13 дюймів",
+      "Акумулятор 8s3p 15000mAh у комплекті",
+    ],
+    featuresEn: [
+      "Day camera Caddx Ratel 2",
+      "10 km fiber optic connection",
+      "13-inch carbon frame",
+      "8s3p 15000mAh battery included",
+    ],
+  },
+];
+
+allProducts.push(...shpakHunterProducts);
 
 export const getProductById = (id: number): Product | undefined => {
   return allProducts.find((product) => product.id === id);
