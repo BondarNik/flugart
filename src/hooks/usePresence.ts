@@ -14,7 +14,7 @@ const getSessionId = () => {
 export const usePresence = () => {
   const location = useLocation();
   const sessionId = useRef(getSessionId());
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   useEffect(() => {
     const updatePresence = async () => {
